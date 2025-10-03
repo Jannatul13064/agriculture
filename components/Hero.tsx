@@ -37,7 +37,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[300px] md:h-[500px] overflow-hidden">
+    <section className="relative h-[300px] md:h-[500px]  overflow-hidden">
       {slides.map((slide, idx) => (
         <div
           key={idx}
@@ -50,7 +50,7 @@ export default function Hero() {
             style={{ backgroundImage: `url(${slide.img})` }}
           >
             {/* Glass background */}
-            <div className="bg-opacity-75 backdrop-blur-lg border border-white border-opacity-30 shadow-lg px-6 pb-8 rounded-xl max-w-xl">
+            <div className="bg-opacity-75 backdrop-blur-lg border border-white border-opacity-30 shadow-lg px-6 pb-8 rounded-xl max-w-xl py-20">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-900 py-2">
                 {slide.title}
               </h1>
