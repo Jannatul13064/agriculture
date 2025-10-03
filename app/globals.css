@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
+/* Default theme (light mode) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* clean white */
+  --foreground: #1a1a1a; /* deep gray for readability */
+  --primary: #166534; /* green (agriculture theme) */
+  --secondary: #facc15; /* yellow accent */
+  --muted: #6b7280; /* gray for subtitles/text */
+
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #fefefe; /* keep background white for professional clean UI */
+    --foreground: #1a1a1a;
   }
 }
 
+/* Tailwind theme overrides */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* Global base styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
 }
