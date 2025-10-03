@@ -7,9 +7,7 @@ export const metadata = {
   title: "AgriHub - Agricultural Information Hub",
   description:
     "Empowering farmers with knowledge, sustainable practices, and technology.",
-  icons: {
-    icon: "/favicon.ico",
-  },
+
   openGraph: {
     title: "AgriHub",
     description: "Your Agricultural Information Hub 🌱",
